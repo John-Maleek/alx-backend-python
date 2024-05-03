@@ -5,10 +5,10 @@
 """
 
 
-from types import NoneType
-from typing import Any, Mapping, TypeVar, Union
+from typing import Any, Mapping, Type, TypeVar, Union
 
 T = TypeVar('T')
+NoneType = Type(None)
 
 
 def safely_get_value(dct: Mapping, key: Any,
