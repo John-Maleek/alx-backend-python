@@ -4,10 +4,8 @@
     correct duck-typed annotations
 """
 
-
-from typing import Any, Optional, Sequence, Union
-
-NoneType = Optional[None]
+from types import NoneType
+from typing import Any, Sequence, Union
 
 
 def safe_first_element(lst: Sequence[Any]) -> Union[Any, NoneType]:
