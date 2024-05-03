@@ -8,7 +8,7 @@
 from typing import Any, Sequence, Type, Union
 
 
-NoneType = Type(None)
+NoneType = Type[None]
 
 
 def safe_first_element(lst: Sequence[Any]) -> Union[Any, NoneType]:

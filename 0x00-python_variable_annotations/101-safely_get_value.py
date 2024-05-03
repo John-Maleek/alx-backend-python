@@ -8,7 +8,7 @@
 from typing import Any, Mapping, Type, TypeVar, Union
 
 T = TypeVar('T')
-NoneType = Type(None)
+NoneType = Type[None]
 
 
 def safely_get_value(dct: Mapping, key: Any,
@@ -18,10 +18,3 @@ def safely_get_value(dct: Mapping, key: Any,
         return dct[key]
     else:
         return default
-
-
-annotations = safely_get_value.__annotations__
-
-print("Here's what the mappings should look like")
-for k, v in annotations.items():
-    print(("{}: {}".format(k, v)))
