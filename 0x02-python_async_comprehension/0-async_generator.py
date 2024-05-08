@@ -10,7 +10,7 @@ import random
 from typing import Any, Generator
 
 
-async def async_generator() -> Generator[Any, Any, Any]:
+async def async_generator() -> Generator[float, None, None]:  # type: ignore
     '''function yield a random value'''
     for _ in range(10):
         await asyncio.sleep(1)
